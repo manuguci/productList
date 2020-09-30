@@ -1,0 +1,19 @@
+.has-search .form-control {
+    padding-left: 2.375rem;
+    border-radius: 50px;
+    
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;    
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;    
+    color: #aaa;    
+}
+
+input{
+    width: 100%;
+}

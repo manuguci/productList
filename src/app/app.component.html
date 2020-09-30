@@ -1,0 +1,65 @@
+<html>
+  <head>
+
+    <script>
+      $scope.search = function (event) {
+                if (event.keyCode == 13) {
+                  onSendSearch();
+                }
+            }            
+    </script>
+  </head>
+  <body>
+    
+
+      <nav class="navbar navbar-dark bg-dark-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a class="navbar-brand">
+                <img src="/assets/lider-logo.svg" class="logo" alt="Logo Lider">
+              </a>              
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <form [formGroup]="searchForm" (ngSubmit)="onSendSearch()">
+                  <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="text" formControlName="search" name="search" class="form-control" placeholder="¿Que estás buscando?" ng-keyup="search($event)">
+                    <button type="submit" class="btn btn-danger" style="display: none;" id="button-search">Buscar</button>
+                  </div>
+              </form>    
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col">
+            <div class="texto"> Items encontrados : {{ items }} </div>
+          </div>
+        </div>
+
+    <div class="row mt-5">
+      <div class="col-4 mt-2" *ngFor="let item of products; let i = index">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="http://{{item.image}}" alt="{{item.image}}">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.brand }}</h5>
+            <p class="card-text">{{ item.description }}</p>
+            <h5 class="card-title">{{ item.price|currency:"CLP":"symbol"}}</h5>
+            <h6><span class="badge badge-danger" *ngIf="item.off">-50%</span></h6>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    
+
+    </div>
+    
+  </body>
+</html>
