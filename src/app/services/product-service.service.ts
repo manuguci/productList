@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductServiceService {
 
-  private endpoint = "http://192.168.99.100:8080/products/"
+  private endpoint = "https://walmark-product-list-back.herokuapp.com/products/"
   constructor(private _http: HttpClient) { }
 
   getProducts(search:string):Observable<any>{
