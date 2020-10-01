@@ -1,12 +1,13 @@
 # ProductList
 
-Ejecución de la app web
+For see app:
 
-1) Clonar fuentes
-2) Crear imagenes Docker 
+https://walmark-product-list-front.herokuapp.com/
 
-	$ docker build -t lider-product-list-angular8 .
-	
-3) Ejecutar imagen
-	
-	$ docker run -it -p 80:80 lider-product-list-angular8	
+For modify app:
+
+Use GIT commit and push to GITHUB Repository (master branch)
+
+https://github.com/manuguci/productList
+
+
