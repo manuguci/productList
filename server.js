@@ -1,9 +1,9 @@
 const express = require ('express');
 const path = require ('path');
 const app = express();
-app.use(express.static(__dirname + '/dist/product-list'));
+app.use(express.static(__dirname + '/dist/productList'));
 app.get('/*', function(req, res){
 
-    res.sendFile(path.join(__dirname + '/dist/product-list/index.html'));
+    res.sendFile(path.join(__dirname + '/dist/productList/index.html'));
 });
 app.listen(process.env.PORT || 8080);
